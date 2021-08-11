@@ -1,8 +1,8 @@
 ext {
     //Kotlin
-    kotlin_version = "1.4.10"
+    kotlin_version = "1.5.10"
     //Hilt
-    hilt_version = "2.37"
+    hilt_version = "2.38.1"
 
     BuildPlugins = [
             androidGradlePlugin: "com.android.tools.build:gradle:4.1.2",
