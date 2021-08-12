@@ -3,7 +3,16 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="../../../../layout/custom_preview.xml" value="0.22135416666666666" />
+        <entry key="app/src/main/res/drawable/background_item_stocks_search_view.xml" value="0.1824074074074074" />
+        <entry key="app/src/main/res/drawable/background_item_stocks_types_card.xml" value="0.209375" />
+        <entry key="app/src/main/res/drawable/background_item_stocks_types_card_active.xml" value="0.209375" />
+        <entry key="app/src/main/res/drawable/ic_search.xml" value="0.209375" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/activity_stock_analisys.xml" value="0.4015151515151515" />
+        <entry key="app/src/main/res/layout/item_stocks_info_adapter.xml" value="0.4817073170731707" />
+        <entry key="app/src/main/res/layout/item_stocks_type_adapter.xml" value="0.67" />
+        <entry key="app/src/main/res/layout/stock_search_view.xml" value="0.33" />
       </map>
     </option>
   </component>

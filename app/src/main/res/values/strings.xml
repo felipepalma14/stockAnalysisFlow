@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">StockAnalysisFlow</string>
+    <string name="stocks_analisys_title">Análise de Ações</string>
+    <string name="stock_search_view_label_search">Buscar</string>
 </resources>

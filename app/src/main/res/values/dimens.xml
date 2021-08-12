@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="dimen_30sp">30sp</dimen>
+    <dimen name="margin_27dp">27dp</dimen>
+    <dimen name="dimen_14sp">14sp</dimen>
+    <dimen name="margin_4dp">4dp</dimen>
+    <dimen name="margin_20dp">20dp</dimen>
+    <dimen name="corner_radios_10dp">10dp</dimen>
+    <dimen name="margin_16dp">16dp</dimen>
+    <dimen name="margin_14dp">14dp</dimen>
+    <dimen name="margin_10dp">10dp</dimen>
+</resources>
