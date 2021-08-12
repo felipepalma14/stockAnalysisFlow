@@ -1,4 +1,4 @@
-package com.felipepalma14.stockAnalysisFlow.core.domain.repository
+package com.felipepalma14.stockAnalysisFlow.features.domain.repository
 
 import com.felipepalma14.stockAnalysisFlow.core.exception.Failure
 import com.felipepalma14.stockAnalysisFlow.core.functional.Either

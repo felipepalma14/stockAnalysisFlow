@@ -1,7 +1,7 @@
 package com.felipepalma14.stockAnalysisFlow.core.di
 
 import com.felipepalma14.stockAnalysisFlow.BuildConfig
-import com.felipepalma14.stockAnalysisFlow.core.data.remote.api.MonteBravoApi
+import com.felipepalma14.stockAnalysisFlow.features.data.remote.api.MonteBravoApi
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn

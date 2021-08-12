@@ -1,0 +1,19 @@
+package com.felipepalma14.stockAnalysisFlow.features.domain.usecase
+
+import com.felipepalma14.stockAnalysisFlow.features.domain.repository.IStockRepository
+import com.felipepalma14.stockAnalysisFlow.core.exception.Failure
+import com.felipepalma14.stockAnalysisFlow.core.functional.Either
+import com.felipepalma14.stockAnalysisFlow.core.interactor.BaseUseCase
+import com.felipepalma14.stockAnalysisFlow.features.domain.model.Stock
+import kotlinx.coroutines.flow.Flow
+import javax.inject.Inject
+
+class GetStockUseCase @Inject constructor(
+    private val repository: IStockRepository
+) : BaseUseCase<Unit, List<Stock>>() {
+
+    override suspend fun run(params: Unit): Flow<Either<Failure, List<Stock>>> {
+        return repository.getStocks()
+    }
+
+}

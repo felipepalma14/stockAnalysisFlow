@@ -1,7 +1,7 @@
-package com.felipepalma14.stockAnalysisFlow.core.data.repository
+package com.felipepalma14.stockAnalysisFlow.features.data.repository
 
-import com.felipepalma14.stockAnalysisFlow.core.data.remote.api.MonteBravoApi
-import com.felipepalma14.stockAnalysisFlow.core.domain.repository.IStockRepository
+import com.felipepalma14.stockAnalysisFlow.features.data.remote.api.MonteBravoApi
+import com.felipepalma14.stockAnalysisFlow.features.domain.repository.IStockRepository
 import com.felipepalma14.stockAnalysisFlow.core.exception.Failure
 import com.felipepalma14.stockAnalysisFlow.core.functional.Either
 import com.felipepalma14.stockAnalysisFlow.features.domain.model.Stock
@@ -13,7 +13,7 @@ import javax.inject.Singleton
 @Singleton
 class StockRepositoryImp @Inject constructor(
     private val apiService: MonteBravoApi
-) : IStockRepository{
+) : IStockRepository {
     override suspend fun getStocks(): Flow<Either<Failure, List<Stock>>> = flow {
         val list = mutableListOf<Stock>()
         try {
