@@ -1,4 +1,4 @@
-package com.felipepalma14.stockAnalysisFlow.core.data.remote.model
+package com.felipepalma14.stockAnalysisFlow.features.data.remote.model
 
 import com.felipepalma14.stockAnalysisFlow.features.domain.model.Stock
 import com.squareup.moshi.Json
