@@ -72,6 +72,7 @@
                     android:layout_marginTop="8dp"
                     android:fontFamily="sans-serif-medium"
                     android:textColor="@color/adapter_subtitle"
+                    android:maxLength="15"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/tvStockSymbol"
@@ -81,7 +82,7 @@
                     android:id="@+id/tvRecommendationLabel"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="10dp"
+                    android:layout_marginTop="@dimen/margin_10dp"
                     android:fontFamily="sans-serif-medium"
                     android:text="@string/adapter_recommendation_label"
                     android:textColor="@color/adapter_subtitle"
@@ -135,26 +136,20 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:fontFamily="sans-serif-medium"
-                        android:text="0,53%"
                         android:textColor="@color/arrow_up"
                         android:textSize="12sp"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintTop_toTopOf="parent" />
                 </androidx.constraintlayout.widget.ConstraintLayout>
 
-                <com.felipepalma14.stockAnalysisFlow.features.stock.presentation.customview.StockRecommendationView
-                    android:id="@+id/srvRecommendation"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="@dimen/margin_8dp"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/constraintLayout" />
-
             </androidx.constraintlayout.widget.ConstraintLayout>
 
-
-
+            <com.felipepalma14.stockAnalysisFlow.features.stock.presentation.customview.StockRecommendationView
+                android:id="@+id/srvRecommendation"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.cardview.widget.CardView>
