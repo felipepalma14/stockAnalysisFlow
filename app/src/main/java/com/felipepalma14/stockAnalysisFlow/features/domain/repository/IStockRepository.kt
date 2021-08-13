@@ -6,5 +6,5 @@ import com.felipepalma14.stockAnalysisFlow.features.domain.model.Stock
 import kotlinx.coroutines.flow.Flow
 
 interface IStockRepository {
-    suspend fun getStocks() : Flow<Either<Failure, List<Stock>>>
+    suspend fun getStocks(query: String) : Flow<Either<Failure, List<Stock>>>
 }

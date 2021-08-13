@@ -15,10 +15,12 @@ import javax.inject.Singleton
 class StockRepositoryImp @Inject constructor(
     private val apiService: MonteBravoApi
 ) : IStockRepository {
-    override suspend fun getStocks(): Flow<Either<Failure, List<Stock>>> = flow {
+    override suspend fun getStocks(query:String): Flow<Either<Failure, List<Stock>>> = flow {
         val list = mutableListOf<Stock>()
         try {
-            val res = apiService.fetchStocks()
+            var res = apiService.fetchStocks(query)
+            if(query.isEmpty()) res = apiService.fetchStocks()
+
             if (res.isSuccessful && res.body() != null) {
                 res.body()?.let {
                     val stocks = it.message.result.map { result ->

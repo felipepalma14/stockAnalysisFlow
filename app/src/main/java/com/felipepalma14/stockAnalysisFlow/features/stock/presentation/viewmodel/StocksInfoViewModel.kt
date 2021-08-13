@@ -21,9 +21,9 @@ class StocksInfoViewModel @Inject constructor(
         get() = _stockState
 
 
-    fun getStocks() {
+    fun getStocks(params:String = "") {
         _stockState.postValue(Resource.loading())
-        getStockUseCase(job, Unit) {
+        getStockUseCase(job, params) {
             it.fold(
                 ::handleSpecieFailure,
                 ::handleSuccess

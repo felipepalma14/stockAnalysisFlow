@@ -10,10 +10,10 @@ import javax.inject.Inject
 
 class GetStockUseCase @Inject constructor(
     private val repository: IStockRepository
-) : BaseUseCase<Unit, List<Stock>>() {
+) : BaseUseCase<String, List<Stock>>() {
 
-    override suspend fun run(params: Unit): Flow<Either<Failure, List<Stock>>> {
-        return repository.getStocks()
+    override suspend fun run(params: String): Flow<Either<Failure, List<Stock>>> {
+        return repository.getStocks(params)
     }
 
 }

@@ -22,7 +22,7 @@ import com.felipepalma14.stockAnalysisFlow.features.domain.model.Stock
 class StocksInfoAdapter(
     private val context:Context,
     private val list: List<Stock>,
-    private val listener: (String) -> Unit
+    private val listener: (Stock) -> Unit
 ) : RecyclerView.Adapter<StocksInfoAdapter.ViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
@@ -63,7 +63,7 @@ class StocksInfoAdapter(
         //}
 
         holder.container.setOnClickListener {
-            listener.invoke(item.toString())
+            listener.invoke(item)
         }
     }
 
