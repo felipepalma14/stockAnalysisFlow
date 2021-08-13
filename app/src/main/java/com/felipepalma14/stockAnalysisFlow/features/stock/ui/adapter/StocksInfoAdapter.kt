@@ -7,6 +7,8 @@ import android.text.style.ForegroundColorSpan
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Filter
+import android.widget.Filterable
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.cardview.widget.CardView
@@ -23,51 +25,37 @@ class StocksInfoAdapter(
     private val context:Context,
     private val list: List<Stock>,
     private val listener: (Stock) -> Unit
-) : RecyclerView.Adapter<StocksInfoAdapter.ViewHolder>() {
+) : RecyclerView.Adapter<StocksInfoAdapter.ViewHolder>(), Filterable {
+
+    private var filterList: List<Stock> = listOf()
+    init {
+        filterList = list
+    }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         val view = LayoutInflater.from(parent.context)
             .inflate(R.layout.item_stocks_info_adapter, parent, false)
-
         return ViewHolder(view)
     }
 
     override fun getItemId(position: Int): Long {
-        return position.toLong()
+        return filterList[position].id.toLong()
     }
 
     override fun getItemViewType(position: Int): Int {
-        return position
+        return filterList[position].id
     }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-        val item = list[holder.adapterPosition]
-        Glide.with(context)
-            .load(item.symbolImageUrl)
-            .fitCenter()
-            .diskCacheStrategy(DiskCacheStrategy.RESOURCE)
-            .into(holder.imgStock)
-        holder.tvStockCompany.text = item.companyName
-        holder.tvStockSymbol.text = item.symbol
-        val spannable = SpannableString(context.getString(R.string.adapter_br_currency, item.currentPrice?.toBRCurrency()))
-        spannable.setSpan(
-            ForegroundColorSpan(ContextCompat.getColor(context,R.color.br_currency_label)),
-            0, 2,
-            Spannable.SPAN_EXCLUSIVE_EXCLUSIVE)
-        holder.tvStockCurrentPrice.text = spannable
-
-        //if(item.recomendation == null) {
-        //    holder.srvRecommendation.visibility = View.GONE
-        //}else{
-        item.recomendation?.let { holder.srvRecommendation.setupStockRecommendation(it) }
-        //}
-
+        val item = filterList[holder.adapterPosition]
+        holder.bind(context, item)
         holder.container.setOnClickListener {
             listener.invoke(item)
         }
+
     }
 
-    override fun getItemCount() = list.size
+    override fun getItemCount() = filterList.size
 
 
     class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
@@ -78,5 +66,57 @@ class StocksInfoAdapter(
         val tvStockCurrentPrice: TextView = this.itemView.findViewById(R.id.tvStockCurrentPrice)
         val srvRecommendation: StockRecommendationView = this.itemView.findViewById(R.id.srvRecommendation)
 
+        fun bind(context: Context, item: Stock){
+            Glide.with(context)
+                .load(item.symbolImageUrl)
+                .fitCenter()
+                .diskCacheStrategy(DiskCacheStrategy.DATA)
+                .into(imgStock)
+            tvStockCompany.text = item.companyName
+            tvStockSymbol.text = item.symbol
+            val spannable = SpannableString(context.getString(R.string.adapter_br_currency, item.currentPrice?.toBRCurrency()))
+            spannable.setSpan(
+                ForegroundColorSpan(ContextCompat.getColor(context,R.color.br_currency_label)),
+                0, 2,
+                Spannable.SPAN_EXCLUSIVE_EXCLUSIVE)
+            tvStockCurrentPrice.text = spannable
+
+            item.recomendation?.let { srvRecommendation.setupStockRecommendation(it) }
+        }
+    }
+
+    override fun getFilter(): Filter {
+        return object : Filter() {
+            override fun performFiltering(constraint: CharSequence?): FilterResults {
+                val charSearch = constraint.toString()
+                filterList = if (charSearch.isEmpty()) {
+                    list
+                } else {
+                    val resultList = mutableListOf<Stock>()
+                    for (row in list) {
+                        row.symbol?.let {
+                            if (it.lowercase().contains(constraint.toString().lowercase())) {
+                                resultList.add(row)
+                            }
+                        }
+                    }
+                    resultList
+                }
+                val filterResults = FilterResults()
+                filterResults.values = filterList
+                return filterResults
+            }
+
+            override fun publishResults(constraint: CharSequence?, results: FilterResults?) {
+                results?.let {
+                    val list =  it.values as List<Stock>
+                    if(list.isNotEmpty()) {
+                        filterList = list
+                        notifyDataSetChanged()
+                    }
+                }
+
+            }
+        }
     }
 }
