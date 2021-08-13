@@ -1,5 +1,6 @@
 package com.felipepalma14.stockAnalysisFlow.features.stock.ui
 
+import android.content.Context
 import android.content.Intent
 import android.graphics.Typeface.BOLD
 import android.os.Bundle
@@ -8,6 +9,7 @@ import android.text.SpannableString
 import android.text.style.StyleSpan
 import android.util.Log
 import android.view.View
+import android.view.inputmethod.InputMethodManager
 import android.widget.TextView
 import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
@@ -22,7 +24,9 @@ import com.felipepalma14.stockAnalysisFlow.core.Constants.NEUTRO
 import com.felipepalma14.stockAnalysisFlow.core.Constants.RESTRICTED
 import com.felipepalma14.stockAnalysisFlow.core.Constants.TODAS
 import com.felipepalma14.stockAnalysisFlow.core.Constants.VENDA
+import com.felipepalma14.stockAnalysisFlow.core.extension.hideKeyboard
 import com.felipepalma14.stockAnalysisFlow.features.customview.StocksSearchView
+import com.felipepalma14.stockAnalysisFlow.features.customview.StocksSearchView.ActionFilter
 import com.felipepalma14.stockAnalysisFlow.features.domain.model.Status
 import com.felipepalma14.stockAnalysisFlow.features.domain.model.Stock
 import com.felipepalma14.stockAnalysisFlow.features.stock.presentation.viewmodel.StocksInfoViewModel
@@ -37,6 +41,8 @@ class StockInfoActivity : AppCompatActivity() {
     private lateinit var rvStocksInfo: RecyclerView
     private lateinit var svSearchStocks: StocksSearchView
     private lateinit var shimmerFrameLayout: ShimmerFrameLayout
+
+    private lateinit var stocksInfoAdapter: StocksInfoAdapter
 
     private val listStocksTypes = listOf(TODAS, COMPRA, VENDA, NEUTRO)
     private val stocksInfoViewModel: StocksInfoViewModel by viewModels()
@@ -64,7 +70,6 @@ class StockInfoActivity : AppCompatActivity() {
             Spannable.SPAN_EXCLUSIVE_EXCLUSIVE
         )
         tvTitle.text = spannable
-
         setupAdapter()
 
     }
@@ -119,11 +124,21 @@ class StockInfoActivity : AppCompatActivity() {
     }
 
     private fun setupStocksInfoAdapter(stocks: List<Stock>) {
-        val adapter = StocksInfoAdapter(context = this, stocks) { stock ->
+        stocksInfoAdapter = StocksInfoAdapter(context = this, stocks) { stock ->
             val intent = Intent(this, StockDetailsActivity::class.java)
             intent.putExtra(INTENT_STOCK_URL, stock.link)
             startActivity(intent)
         }
-        rvStocksInfo.adapter = adapter
+        rvStocksInfo.setHasFixedSize(true)
+        rvStocksInfo.adapter = stocksInfoAdapter
+        svSearchStocks.setupActionFilterListener(object: ActionFilter{
+            override fun onTextChanged(query: String) {
+                stocksInfoAdapter.filter.filter(query)
+            }
+            override fun onClickCancel() {
+                hideKeyboard()
+            }
+
+        })
     }
 }
