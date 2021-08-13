@@ -99,10 +99,10 @@ class StockInfoActivity : AppCompatActivity() {
         })
     }
 
-
     private fun setupAdapter() {
         val adapter =
             StocksTypeAdapter(context = this, listStocksTypes, rvStocksType) { selectedStocksType ->
+                svSearchStocks.cancelButtonAction()
                 when (selectedStocksType) {
                     TODAS -> {
                         stocksInfoViewModel.getStocks()
