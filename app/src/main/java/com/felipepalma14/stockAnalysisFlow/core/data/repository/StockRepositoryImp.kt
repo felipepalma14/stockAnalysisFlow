@@ -1,11 +1,11 @@
-package com.felipepalma14.stockAnalysisFlow.features.data.repository
+package com.felipepalma14.stockAnalysisFlow.core.data.repository
 
 import android.util.Log
-import com.felipepalma14.stockAnalysisFlow.features.data.remote.api.MonteBravoApi
-import com.felipepalma14.stockAnalysisFlow.features.domain.repository.IStockRepository
+import com.felipepalma14.stockAnalysisFlow.core.data.remote.api.MonteBravoApi
+import com.felipepalma14.stockAnalysisFlow.features.stock.presentation.domain.repository.IStockRepository
 import com.felipepalma14.stockAnalysisFlow.core.exception.Failure
 import com.felipepalma14.stockAnalysisFlow.core.functional.Either
-import com.felipepalma14.stockAnalysisFlow.features.domain.model.Stock
+import com.felipepalma14.stockAnalysisFlow.features.stock.presentation.domain.model.Stock
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.flow
 import javax.inject.Inject

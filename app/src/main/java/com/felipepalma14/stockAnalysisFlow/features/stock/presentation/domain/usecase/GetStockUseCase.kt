@@ -1,10 +1,10 @@
-package com.felipepalma14.stockAnalysisFlow.features.domain.usecase
+package com.felipepalma14.stockAnalysisFlow.features.stock.presentation.domain.usecase
 
-import com.felipepalma14.stockAnalysisFlow.features.domain.repository.IStockRepository
+import com.felipepalma14.stockAnalysisFlow.features.stock.presentation.domain.repository.IStockRepository
 import com.felipepalma14.stockAnalysisFlow.core.exception.Failure
 import com.felipepalma14.stockAnalysisFlow.core.functional.Either
 import com.felipepalma14.stockAnalysisFlow.core.interactor.BaseUseCase
-import com.felipepalma14.stockAnalysisFlow.features.domain.model.Stock
+import com.felipepalma14.stockAnalysisFlow.features.stock.presentation.domain.model.Stock
 import kotlinx.coroutines.flow.Flow
 import javax.inject.Inject
 

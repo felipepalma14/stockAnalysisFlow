@@ -1,9 +1,9 @@
 package com.felipepalma14.stockAnalysisFlow.core.di
 
 import com.felipepalma14.stockAnalysisFlow.core.Constants
-import com.felipepalma14.stockAnalysisFlow.features.data.remote.api.MonteBravoApi
-import com.felipepalma14.stockAnalysisFlow.features.data.repository.StockRepositoryImp
-import com.felipepalma14.stockAnalysisFlow.features.domain.repository.IStockRepository
+import com.felipepalma14.stockAnalysisFlow.core.data.remote.api.MonteBravoApi
+import com.felipepalma14.stockAnalysisFlow.core.data.repository.StockRepositoryImp
+import com.felipepalma14.stockAnalysisFlow.features.stock.presentation.domain.repository.IStockRepository
 import dagger.Binds
 import dagger.Module
 import dagger.Provides

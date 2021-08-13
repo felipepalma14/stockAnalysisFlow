@@ -1,6 +1,5 @@
 package com.felipepalma14.stockAnalysisFlow.features.stock.ui
 
-import android.content.Context
 import android.content.Intent
 import android.graphics.Typeface.BOLD
 import android.os.Bundle
@@ -9,7 +8,6 @@ import android.text.SpannableString
 import android.text.style.StyleSpan
 import android.util.Log
 import android.view.View
-import android.view.inputmethod.InputMethodManager
 import android.widget.TextView
 import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
@@ -25,10 +23,10 @@ import com.felipepalma14.stockAnalysisFlow.core.Constants.RESTRICTED
 import com.felipepalma14.stockAnalysisFlow.core.Constants.TODAS
 import com.felipepalma14.stockAnalysisFlow.core.Constants.VENDA
 import com.felipepalma14.stockAnalysisFlow.core.extension.hideKeyboard
-import com.felipepalma14.stockAnalysisFlow.features.customview.StocksSearchView
-import com.felipepalma14.stockAnalysisFlow.features.customview.StocksSearchView.ActionFilter
-import com.felipepalma14.stockAnalysisFlow.features.domain.model.Status
-import com.felipepalma14.stockAnalysisFlow.features.domain.model.Stock
+import com.felipepalma14.stockAnalysisFlow.features.stock.presentation.customview.StocksSearchView
+import com.felipepalma14.stockAnalysisFlow.features.stock.presentation.customview.StocksSearchView.ActionFilter
+import com.felipepalma14.stockAnalysisFlow.features.stock.presentation.domain.model.Status
+import com.felipepalma14.stockAnalysisFlow.features.stock.presentation.domain.model.Stock
 import com.felipepalma14.stockAnalysisFlow.features.stock.presentation.viewmodel.StocksInfoViewModel
 import com.felipepalma14.stockAnalysisFlow.features.stock.ui.adapter.StocksInfoAdapter
 import com.felipepalma14.stockAnalysisFlow.features.stock.ui.adapter.StocksTypeAdapter

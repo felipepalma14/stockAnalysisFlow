@@ -4,9 +4,9 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import com.felipepalma14.stockAnalysisFlow.core.exception.Failure
-import com.felipepalma14.stockAnalysisFlow.features.domain.model.Resource
-import com.felipepalma14.stockAnalysisFlow.features.domain.model.Stock
-import com.felipepalma14.stockAnalysisFlow.features.domain.usecase.GetStockUseCase
+import com.felipepalma14.stockAnalysisFlow.features.stock.presentation.domain.model.Resource
+import com.felipepalma14.stockAnalysisFlow.features.stock.presentation.domain.model.Stock
+import com.felipepalma14.stockAnalysisFlow.features.stock.presentation.domain.usecase.GetStockUseCase
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.Job
 import javax.inject.Inject

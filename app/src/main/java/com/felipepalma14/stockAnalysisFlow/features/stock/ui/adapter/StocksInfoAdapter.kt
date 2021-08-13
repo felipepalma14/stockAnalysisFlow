@@ -18,8 +18,8 @@ import com.bumptech.glide.Glide
 import com.bumptech.glide.load.engine.DiskCacheStrategy
 import com.felipepalma14.stockAnalysisFlow.R
 import com.felipepalma14.stockAnalysisFlow.core.extension.toBRCurrency
-import com.felipepalma14.stockAnalysisFlow.features.customview.StockRecommendationView
-import com.felipepalma14.stockAnalysisFlow.features.domain.model.Stock
+import com.felipepalma14.stockAnalysisFlow.features.stock.presentation.customview.StockRecommendationView
+import com.felipepalma14.stockAnalysisFlow.features.stock.presentation.domain.model.Stock
 
 class StocksInfoAdapter(
     private val context:Context,

@@ -31,7 +31,7 @@
             app:layout_constraintTop_toTopOf="parent"
             tools:text="@string/stocks_analisys_title" />
 
-        <com.felipepalma14.stockAnalysisFlow.features.customview.StocksSearchView
+        <com.felipepalma14.stockAnalysisFlow.features.stock.presentation.customview.StocksSearchView
             android:id="@+id/svSearchStocks"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"

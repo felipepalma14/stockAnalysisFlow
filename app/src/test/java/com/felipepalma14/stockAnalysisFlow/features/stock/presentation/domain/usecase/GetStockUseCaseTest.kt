@@ -1,9 +1,9 @@
-package com.felipepalma14.stockAnalysisFlow.features.domain.usecase
+package com.felipepalma14.stockAnalysisFlow.features.stock.presentation.domain.usecase
 
 import com.felipepalma14.stockAnalysisFlow.UnitTest
-import com.felipepalma14.stockAnalysisFlow.features.domain.repository.IStockRepository
+import com.felipepalma14.stockAnalysisFlow.features.stock.presentation.domain.repository.IStockRepository
 import com.felipepalma14.stockAnalysisFlow.core.functional.Either
-import com.felipepalma14.stockAnalysisFlow.features.domain.model.Stock
+import com.felipepalma14.stockAnalysisFlow.features.stock.presentation.domain.model.Stock
 import io.mockk.coEvery
 import io.mockk.coVerify
 import io.mockk.impl.annotations.MockK
@@ -28,12 +28,13 @@ class GetStockUseCaseTest : UnitTest() {
 
     @Test
     fun `should call getStocks from repository`() = runBlockingTest {
-        coEvery { repository.getStocks() } returns flow {
+        val all = ""
+        coEvery { repository.getStocks(all) } returns flow {
             emit(
                 Either.Right(emptyList<Stock>())
             )
         }
-        useCase.run(Unit)
-        coVerify(exactly = 1) { repository.getStocks() }
+        useCase.run(all)
+        coVerify(exactly = 1) { repository.getStocks(all) }
     }
 }

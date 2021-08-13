@@ -1,4 +1,4 @@
-package com.felipepalma14.stockAnalysisFlow.features.data.remote.model
+package com.felipepalma14.stockAnalysisFlow.core.data.remote.model
 
 data class StockResponse(
     val message: Message,

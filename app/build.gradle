@@ -56,12 +56,6 @@ dependencies {
     implementation Libraries.moshiConverter
     implementation Libraries.okHTTPLogger
 
-
-    //persistence
-    implementation Libraries.room
-    kapt Libraries.roomCompiler
-    implementation Libraries.roomKTX
-
     //shimmer
     implementation Libraries.shimmer
 
@@ -76,10 +70,10 @@ dependencies {
     testImplementation TestLibraries.androidX
     testImplementation TestLibraries.truth
     testImplementation TestLibraries.coroutines
-    testImplementation TestLibraries.room
     testImplementation TestLibraries.mockk
     testImplementation TestLibraries.testRunner
     testImplementation TestLibraries.robolectric
+    testImplementation TestLibraries.archCore
 
     androidTestImplementation TestLibraries.junit
     androidTestImplementation TestLibraries.androidX

@@ -1,4 +1,4 @@
-package com.felipepalma14.stockAnalysisFlow.features.customview
+package com.felipepalma14.stockAnalysisFlow.features.stock.presentation.customview
 
 import android.content.Context
 import android.util.AttributeSet

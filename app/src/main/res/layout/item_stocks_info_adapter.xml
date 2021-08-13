@@ -141,7 +141,7 @@
                         app:layout_constraintTop_toTopOf="parent" />
                 </androidx.constraintlayout.widget.ConstraintLayout>
 
-                <com.felipepalma14.stockAnalysisFlow.features.customview.StockRecommendationView
+                <com.felipepalma14.stockAnalysisFlow.features.stock.presentation.customview.StockRecommendationView
                     android:id="@+id/srvRecommendation"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"

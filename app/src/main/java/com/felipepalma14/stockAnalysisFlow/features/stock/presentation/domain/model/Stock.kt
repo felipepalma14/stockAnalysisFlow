@@ -1,4 +1,4 @@
-package com.felipepalma14.stockAnalysisFlow.features.domain.model
+package com.felipepalma14.stockAnalysisFlow.features.stock.presentation.domain.model
 
 data class Stock(
     val id: Int,
