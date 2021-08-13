@@ -29,9 +29,7 @@ class StocksSearchView @JvmOverloads constructor(
         btnCancel = view.findViewById(R.id.btnCancel)
 
         btnCancel.setOnClickListener {
-            edtFilter.setText("")
-            btnCancel.visibility = View.GONE
-            actionFilter?.onClickCancel()
+            cancelButtonAction()
         }
 
         edtFilter.apply {
@@ -46,6 +44,12 @@ class StocksSearchView @JvmOverloads constructor(
                 }
             }
         }
+    }
+
+    fun cancelButtonAction(){
+        edtFilter.setText("")
+        btnCancel.visibility = View.GONE
+        actionFilter?.onClickCancel()
     }
 
     fun setupActionFilterListener(listener: ActionFilter){

@@ -22,6 +22,7 @@
     <color name="stock_search_view_border">#3F454E</color>
     <color name="stock_search_view_content">#14171C</color>
     <color name="arrow_up">#27B743</color>
+    <color name="arrow_down">#E23833</color>
     <color name="buy">#27B743</color>
     <color name="sell">#E23833</color>
     <color name="neutral">#808390</color>
