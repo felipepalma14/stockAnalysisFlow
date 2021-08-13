@@ -3,7 +3,7 @@
 
 An Android application to showcase Stocks info. The application allows user to search
 for stocks and view the details of each stock. The application consumes
-data from the [Star Wars API](https://api.montebravo.lionx.ai/api/estimates?origin=XP)
+data from the [MB API](https://api.montebravo.lionx.ai/api/estimates?origin=XP)
 
 Minimum Api Level : 21
 compileSdkVersion : 31
@@ -79,10 +79,5 @@ to obtain data from the network as well as the database.
 For this reason I have chosen Hilt which is built on top of the battle tested DI framework - Dagger 2.
 
 ## Demo
-
-Find below screenshots of the application
-
-|<img src="images/screen_1.jpeg" width=200/>|<img src="images/screen_2.jpeg" width=200/>|<img src="images/screen_3.jpeg" width=200/>|
-|:----:|:----:|:----:|
 
 
