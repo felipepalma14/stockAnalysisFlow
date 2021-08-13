@@ -15,7 +15,7 @@ data class Result(
     val link: String,
     val origin: String,
     @field:Json(name = "potential_price") val potentialPrice: String,
-    val recomendation: String,
+    val recomendation: String?,
     val ref: String,
     val symbol: String,
     @field:Json(name = "symbol_image_url") val symbolImageUrl: String,
