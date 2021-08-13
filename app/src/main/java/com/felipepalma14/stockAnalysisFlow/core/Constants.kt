@@ -7,6 +7,7 @@ object Constants {
     const val RESTRICTED = "restricted"
 
     const val INTENT_STOCK_URL = "STOCK_URL"
+    const val SPLASH_TIME = 3000L
 
     const val BASE_URL = "https://api.montebravo.lionx.ai/api/"
 
