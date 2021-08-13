@@ -6,5 +6,5 @@ import retrofit2.http.GET
 
 interface MonteBravoApi {
     @GET("estimates?origin=XP")
-    fun fetchStocks(): Response<StockResponse>
+    suspend fun fetchStocks(): Response<StockResponse>
 }

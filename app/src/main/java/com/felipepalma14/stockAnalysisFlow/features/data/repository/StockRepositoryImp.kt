@@ -1,5 +1,6 @@
 package com.felipepalma14.stockAnalysisFlow.features.data.repository
 
+import android.util.Log
 import com.felipepalma14.stockAnalysisFlow.features.data.remote.api.MonteBravoApi
 import com.felipepalma14.stockAnalysisFlow.features.domain.repository.IStockRepository
 import com.felipepalma14.stockAnalysisFlow.core.exception.Failure
@@ -27,6 +28,7 @@ class StockRepositoryImp @Inject constructor(
                 }
             }
         } catch (exception: Throwable) {
+            Log.d("StockRepositoryImp", "getStocks: ${exception.message}")
         }
         emit(Either.Right(list))
     }
