@@ -26,4 +26,7 @@
     <color name="sell">#E23833</color>
     <color name="neutral">#808390</color>
 
+    <color name="stroke_color">#2E2E2E</color>
+    <color name="grey">#787878</color>
+
 </resources>
