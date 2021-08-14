@@ -48,6 +48,7 @@ dependencies {
     //hilt for DI
     implementation Libraries.hilt
     kapt Libraries.hiltCompiler
+    kapt Libraries.androidXHiltCompiler
 
 
     //retrofit
@@ -55,28 +56,24 @@ dependencies {
     implementation Libraries.moshiConverter
     implementation Libraries.okHTTPLogger
 
-
-    //persistence
-    implementation Libraries.room
-    kapt Libraries.roomCompiler
-    implementation Libraries.roomKTX
-
     //shimmer
     implementation Libraries.shimmer
 
     //coroutines
     implementation Libraries.coroutinesAndroid
 
+    implementation 'com.github.bumptech.glide:glide:4.12.0'
+    annotationProcessor 'com.github.bumptech.glide:compiler:4.12.0'
 
     testImplementation TestLibraries.testCore
     testImplementation TestLibraries.junit
     testImplementation TestLibraries.androidX
     testImplementation TestLibraries.truth
     testImplementation TestLibraries.coroutines
-    testImplementation TestLibraries.room
     testImplementation TestLibraries.mockk
     testImplementation TestLibraries.testRunner
     testImplementation TestLibraries.robolectric
+    testImplementation TestLibraries.archCore
 
     androidTestImplementation TestLibraries.junit
     androidTestImplementation TestLibraries.androidX

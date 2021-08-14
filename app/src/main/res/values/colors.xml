@@ -7,4 +7,27 @@
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+
+    <color name="background">#14171C</color>
+    <color name="color_white">#FFFFFF</color>
+    <color name="adapter_subtitle">#808390</color>
+    <color name="background_card_stock_info">#272C34</color>
+    <color name="color_border_stocks_type_inactive">#272C34</color>
+    <color name="color_background_stocks_type_inactive">#1F222A</color>
+    <color name="on_stock_type_inactive">#808390</color>
+    <color name="color_background_stocks_type_active">#968275</color>
+    <color name="search_view">#808390</color>
+    <color name="br_currency_label">#808390</color>
+    <color name="search_view_label_cancel">#4DA2FF</color>
+    <color name="stock_search_view_border">#3F454E</color>
+    <color name="stock_search_view_content">#14171C</color>
+    <color name="arrow_up">#27B743</color>
+    <color name="arrow_down">#E23833</color>
+    <color name="buy">#27B743</color>
+    <color name="sell">#E23833</color>
+    <color name="neutral">#808390</color>
+
+    <color name="stroke_color">#2E2E2E</color>
+    <color name="grey">#787878</color>
+
 </resources>

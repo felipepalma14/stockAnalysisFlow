@@ -3,7 +3,23 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="../../../../layout/custom_preview.xml" value="0.22135416666666666" />
+        <entry key="app/src/main/res/drawable/background_item_stocks_search_view.xml" value="0.1824074074074074" />
+        <entry key="app/src/main/res/drawable/background_item_stocks_types_card.xml" value="0.209375" />
+        <entry key="app/src/main/res/drawable/background_item_stocks_types_card_active.xml" value="0.209375" />
+        <entry key="app/src/main/res/drawable/ic_arrow_up.xml" value="0.209375" />
+        <entry key="app/src/main/res/drawable/ic_search.xml" value="0.209375" />
+        <entry key="app/src/main/res/drawable/shimmer_bg.xml" value="0.209375" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/activity_stock_analisys.xml" value="0.4015151515151515" />
+        <entry key="app/src/main/res/layout/activity_stock_details.xml" value="0.1685185185185185" />
+        <entry key="app/src/main/res/layout/item_stocks_info_adapter.xml" value="0.3492723492723493" />
+        <entry key="app/src/main/res/layout/item_stocks_type_adapter.xml" value="0.67" />
+        <entry key="app/src/main/res/layout/stock_item_shimmer.xml" value="0.5" />
+        <entry key="app/src/main/res/layout/stock_recommendation_view.xml" value="0.5" />
+        <entry key="app/src/main/res/layout/stock_search_view.xml" value="0.33" />
+        <entry key="app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.209375" />
+        <entry key="app/src/main/res/xml/network_security_config.xml" value="0.19322916666666667" />
       </map>
     </option>
   </component>

@@ -1,3 +1,11 @@
 <resources>
     <string name="app_name">StockAnalysisFlow</string>
+    <string name="stocks_analisys_title">Análise de Ações</string>
+    <string name="stock_search_view_label_search">Buscar</string>
+
+    <string name="adapter_br_currency">BR %s</string>
+    <string name="recommendation_buy">Comprar</string>
+    <string name="adapter_recommendation_label">Recomendação:</string>
+    <string name="recommendation_neutral">Neutro</string>
+    <string name="recommendation_sell">Venda</string>
 </resources>
