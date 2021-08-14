@@ -14,6 +14,7 @@ Build System : [Gradle](https://gradle.org/)
 
 - [Architecture](#architecture)
 - [Libraries](#libraries)
+- [MAD SCOREBOARD](#Mad Scoreboard)
 - [Demo](#demo)
 
 
@@ -77,6 +78,20 @@ to obtain data from the network as well as the database.
 - [Truth](https://truth.dev/) - Assertions Library, provides readability as far as assertions are concerned.
 - [Hilt](https://github.com/InsertKoinIO/koin) - Dependency injection plays a central role in the architectural pattern used.
 For this reason I have chosen Hilt which is built on top of the battle tested DI framework - Dagger 2.
+
+## Mad Scoreboard
+<p align="center">
+    <img src="assets/summary.png"
+        style="margin-right: 20px;"
+    />
+</p>
+
+<p align="center">
+    <img src="assets/kotlin.png"
+        style="margin-right: 20px;"
+    />
+</p>
+
 
 ## Demo
 
