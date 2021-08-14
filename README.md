@@ -81,17 +81,16 @@ For this reason I have chosen Hilt which is built on top of the battle tested DI
 
 ## Mad Scoreboard
 <p align="center">
-    <img src="assets/summary.png"
+    <img src="images/summary.png"
         style="margin-right: 20px;"
     />
 </p>
 
 <p align="center">
-    <img src="assets/kotlin.png"
+    <img src="images/kotlin.png"
         style="margin-right: 20px;"
     />
 </p>
-
 
 ## Demo
 
